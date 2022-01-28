@@ -6,16 +6,20 @@ import Nav from "./components/Nav";
 import MovieDetail from "./pages/MovieDetail";
 import GlobalStyle from "./components/GlobalStyle";
 
-import {Route,Switch} from "react-router-dom";
+import {Route,Switch,useLocation} from "react-router-dom";
+import {AnimatePresence} from "framer-motion";
 
 
 function App() {
+  const location=useLocation();
+  console.log(location);
   return (
   
     <div className="App">
       <GlobalStyle/>
       <Nav/>
-      <Switch>
+      <AnimatePresence exitBeforeEnter >
+      <Switch location={location} key={location.pathname}>
          <Route path="/" exact >
             <AboutUs />
           </Route>
@@ -29,6 +33,7 @@ function App() {
             <ContactUs />
           </Route>
           </Switch>
+          </AnimatePresence>
     </div>
   );
 }

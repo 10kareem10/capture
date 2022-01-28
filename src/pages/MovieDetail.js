@@ -4,6 +4,10 @@ import { useHistory } from "react-router-dom";
 import {MovieState} from "../movieState";
 
 
+import { motion } from "framer-motion"
+import { pageAnimation } from "../animation"
+
+
 
 
   
@@ -20,7 +24,9 @@ import {MovieState} from "../movieState";
   return (
     <>
     {movie && (
-    <Details>
+    <Details
+    exit="exit" variants={pageAnimation} initial="hidden" animate="show"
+    >
         <Headlines>
           <h2>
             {movie.title}
@@ -42,7 +48,7 @@ import {MovieState} from "../movieState";
   );
 };
 
-const Details=styled.div`
+const Details=styled(motion.div)`
 color: white;
 `;
 
