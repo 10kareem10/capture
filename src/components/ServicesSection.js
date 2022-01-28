@@ -17,28 +17,28 @@ const ServicesSection =()=>{
                 <Cards>
                     <Card>
                         <div className="icon">
-                            <img src={clock}/>
+                            <img src={clock} alt="a"/>
                             <h3>Efficient</h3>
                         </div>
                         <p>lorem shsjfjshjsnj  sfs fa wef ef dcasc </p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={teamwork}/>
+                            <img src={teamwork} alt="a"/>
                             <h3>Teamwork</h3>
                         </div>
                         <p>lorem shsjfjshjsnj  sfs fa wef ef dcasc </p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={diaphragm}/>
+                            <img src={diaphragm} alt="a"/>
                             <h3>diaphragm</h3>
                         </div>
                         <p>lorem shsjfjshjsnj  sfs fa wef ef dcasc </p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={money}/>
+                            <img src={money} alt="a"/>
                             <h3>Affordable</h3>
                         </div>
                         <p>lorem shsjfjshjsnj  sfs fa wef ef dcasc </p>
@@ -46,7 +46,7 @@ const ServicesSection =()=>{
                 </Cards>
             </Description>
             <Image>
-                <img src={home2} />
+                <img src={home2} alt="a"/>
             </Image>
 
         </About>
