@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { About,Hide,Image,Description } from "./styles";
 import { motion } from "framer-motion";
 import { titleAnim,fade,photoAnim } from "../animation";
+import Wave from "./Wave";
 
 
 const AboutSection=()=>{
@@ -31,8 +32,9 @@ const AboutSection=()=>{
                  <motion.button variants={fade}>Contact Us</motion.button>
             </ Description>
             <Image>
-                <motion.img variants={photoAnim} src={home1} alt="guy with a camera"/>
+                <motion.img variants={photoAnim} initial='hidden' animate="show" src={home1} alt="guy with a camera"/>
             </Image>
+            <Wave/>
         </About>
 
     );

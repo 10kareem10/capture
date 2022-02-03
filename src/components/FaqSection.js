@@ -1,67 +1,67 @@
-import React from "react";
+import React,{useState} from "react";
 import styled from "styled-components";
 import { About,Hide,Image,Description } from "./styles";
+import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { fade } from "../animation";
+import { scrollReveal } from "../animation";
+
 
 
 const FaqSection=()=>{
+    const [faqToggle,setFaqToggle]=useState([{active:true,title:'Question', description:'hey'}]);
+    const [element,controls]=useScroll();
     return(
-        <Faq>
+        <Faq variants={scrollReveal} ref={element} animate={controls} initial="hidden" >
             <h2>
                Any questions? <span>FAQ</span> 
             </h2>
-            <div className="Question">
-                <h4>
-                    How Do I Start?
-                </h4>
+            <AnimateSharedLayout>
+            <Toggle title='How Do I Start?'>
+           
+                
+                <div className="Answer">
+                    <p>Lorem ispum dolor sit amet.</p>
+                     <p>
+                        Lorem bfhevfe gydgwd bbdb wb w   w dhsdhbs x
+                    </p>
+                </div>
+                 
+            </Toggle>
+            <Toggle title='Daily scheduele'>
+        
+                
                 <div className="Answer">
                     <p>Lorem ispum dolor sit amet.</p>
                     <p>
                         Lorem bfhevfe gydgwd bbdb wb w   w dhsdhbs x
                     </p>
 
-                </div>
-                <div className="faq-line"></div>
+                
+                
             </div>
-
-            <div className="Question">
-                <h4>
-                    Daily scheduele
-                </h4>
+            </Toggle>
+            <Toggle title='Different Payment Methods'>
+            
+            
                 <div className="Answer">
                     <p>Lorem ispum dolor sit amet.</p>
                     <p>
                         Lorem bfhevfe gydgwd bbdb wb w   w dhsdhbs x
                     </p>
-
-                </div>
-                <div className="faq-line"></div>
             </div>
-            <div className="Question">
-                <h4>
-                    Different Payment Methods
-                </h4>
+            </Toggle>
+            <Toggle title='What Products do you offer'>
+                
                 <div className="Answer">
                     <p>Lorem ispum dolor sit amet.</p>
                     <p>
                         Lorem bfhevfe gydgwd bbdb wb w   w dhsdhbs x
                     </p>
-
-                </div>
-                <div className="faq-line"></div>
             </div>
-            <div className="Question">
-                <h4>
-                    What Products do you offer?
-                </h4>
-                <div className="Answer">
-                    <p>Lorem ispum dolor sit amet.</p>
-                    <p>
-                        Lorem bfhevfe gydgwd bbdb wb w   w dhsdhbs x
-                    </p>
-
-                </div>
-                <div className="faq-line"></div>
-            </div>
+            </Toggle>
+            </AnimateSharedLayout>
 
         </Faq>
 
