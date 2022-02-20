@@ -20,14 +20,26 @@ export const Description = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;
+    
   }
+  /* p{color:red} */
+  h5{
+    display: none;
+    color:grey;
+    font-size:10rem;
+    
+  }
+  
+}
+  
+  
   @media (max-width: 1300px) {
-    padding: 0;
+    
     button {
       margin: 2rem 0rem 5rem 0rem;
     }
-  }
-`;
+  }`;
+  
 export const Image = styled.div`
   z-index: 2;
   flex: 1;

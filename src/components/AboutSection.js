@@ -25,10 +25,14 @@ const AboutSection=()=>{
                         <motion.h2 variants={titleAnim}>true.</motion.h2>
                     </Hide>
                 </motion.div>
+                <div>
                 <motion.p variants={fade}>Contact us for any photography
                  or videography ideas that you have, 
                  we have professionals with amazing skills.
                  </motion.p>
+                
+                 </div>
+                 
                  <motion.button variants={fade}>Contact Us</motion.button>
             </ Description>
             <Image>
